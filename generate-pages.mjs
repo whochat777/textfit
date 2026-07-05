@@ -94,7 +94,7 @@ function pageHtml({ preset, root = false }) {
           <p class="selectedMeta" data-selected-meta></p>
           <div class="selectedTitleRow">
             <h2 data-selected-title></h2>
-            <span class="typeBadge">Active</span>
+            <a class="typeBadge" data-selected-source href="#" target="_blank" rel="noopener">Source</a>
           </div>
           <div class="score">
             <strong data-score-value>0</strong>
@@ -102,7 +102,6 @@ function pageHtml({ preset, root = false }) {
           </div>
           <div class="meter" data-meter data-state="ok"><div class="bar" data-progress></div></div>
           <p class="hint" data-selected-hint></p>
-          <a class="source" data-selected-source href="#" target="_blank" rel="noopener">Source</a>
         </section>
 
         <section class="presetPanel" id="presets">
