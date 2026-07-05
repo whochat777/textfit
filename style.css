@@ -1,15 +1,15 @@
 :root {
   --bg: #ffffff;
   --ink: #0a0a0a;
-  --muted: #60646f;
-  --faint: #f7f8fb;
+  --muted: #5d6472;
+  --faint: #f6f7fb;
   --panel: #ffffff;
   --line: #0f1117;
   --line-soft: #e4e6ee;
-  --accent: #f43f5e;
-  --accent-dark: #d91f43;
-  --blue: #4f70ff;
-  --violet: #8b5cf6;
+  --accent: #ff4d2e;
+  --accent-dark: #d7371c;
+  --blue: #0b84ff;
+  --violet: #6d5dfc;
   --ok: #0d7a4f;
   --warn: #b25b00;
   --bad: #b91c1c;
@@ -24,10 +24,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(244, 63, 94, .12), transparent 28%),
-    radial-gradient(circle at 82% 8%, rgba(79, 112, 255, .13), transparent 30%),
-    linear-gradient(180deg, #fff 0%, #fff 42%, #f8f9fc 100%);
+  background: #fff;
   color: var(--ink);
   overflow-x: hidden;
 }
@@ -105,7 +102,7 @@ header {
   right: 3px;
   top: 3px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--blue));
+  background: var(--blue);
   box-shadow: 0 0 0 3px #fff;
 }
 
@@ -141,9 +138,9 @@ main {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(310px, 390px);
-  gap: 42px;
+  gap: 56px;
   align-items: center;
-  padding: 44px 0 34px;
+  padding: 56px 0 44px;
 }
 
 .eyebrow,
@@ -162,10 +159,10 @@ main {
   align-items: center;
   margin: 0 0 18px;
   padding: 0 13px;
-  border: 1px solid rgba(244, 63, 94, .18);
+  border: 1px solid rgba(15, 17, 23, .1);
   border-radius: 999px;
-  background: rgba(244, 63, 94, .08);
-  color: var(--accent-dark);
+  background: #f7f8fb;
+  color: #252935;
 }
 
 h1 {
@@ -180,7 +177,7 @@ h1 {
 .intro {
   max-width: 700px;
   margin: 22px 0 0;
-  color: #2f2f35;
+  color: #303642;
   font-size: clamp(19px, 2vw, 23px);
   line-height: 1.46;
   text-wrap: pretty;
@@ -214,18 +211,16 @@ h1 {
 }
 
 .routeCard {
-  border: 1px solid rgba(15, 17, 23, .1);
-  border-radius: 28px;
+  border: 1px solid rgba(15, 17, 23, .12);
+  border-radius: 22px;
   background:
-    linear-gradient(135deg, rgba(244, 63, 94, .08), transparent 34%),
-    linear-gradient(315deg, rgba(79, 112, 255, .12), transparent 42%),
-    #fff;
+    linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
   color: var(--ink);
   padding: 18px;
   min-height: 238px;
   display: grid;
   align-content: space-between;
-  box-shadow: 0 24px 80px rgba(15, 17, 23, .12);
+  box-shadow: 0 18px 44px rgba(15, 17, 23, .1);
 }
 
 .routeChrome {
@@ -261,8 +256,8 @@ h1 {
 .routeCard code {
   display: block;
   padding: 16px;
-  border-radius: 18px;
-  background: #11131a;
+  border-radius: 14px;
+  background: #090b10;
   color: #fff;
   font-family: "SF Mono", "Courier New", ui-monospace, monospace;
   font-size: 13px;
@@ -273,7 +268,7 @@ h1 {
 
 .routeCard code::before {
   content: "$ ";
-  color: #96a2ff;
+  color: var(--blue);
 }
 
 .routeSteps {
@@ -288,7 +283,7 @@ h1 {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: #f2f4fa;
+  background: #eef1f7;
   color: #393d49;
   font-size: 12px;
   font-weight: 900;
@@ -302,13 +297,13 @@ h1 {
 
 .tool {
   border: 1px solid rgba(15, 17, 23, .09);
-  border-radius: 32px;
+  border-radius: 26px;
   overflow: hidden;
   background: #fff;
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
   min-height: 660px;
-  box-shadow: 0 30px 90px rgba(15, 17, 23, .1);
+  box-shadow: 0 18px 54px rgba(15, 17, 23, .08);
 }
 
 .editor,
@@ -464,9 +459,7 @@ textarea:focus {
 
 .inspector {
   background:
-    radial-gradient(circle at 84% 10%, rgba(244, 63, 94, .12), transparent 28%),
-    radial-gradient(circle at 18% 86%, rgba(79, 112, 255, .12), transparent 30%),
-    #f8f9fc;
+    linear-gradient(180deg, #f8f9fc 0%, #f2f4f8 100%);
   display: grid;
   gap: 18px;
   align-content: start;
@@ -476,9 +469,9 @@ textarea:focus {
 .presetPanel,
 .markdownPanel {
   border: 1px solid rgba(15, 17, 23, .09);
-  border-radius: 24px;
+  border-radius: 20px;
   background: #fff;
-  box-shadow: 0 16px 44px rgba(15, 17, 23, .06);
+  box-shadow: 0 10px 30px rgba(15, 17, 23, .05);
 }
 
 .resultCard {
@@ -505,11 +498,11 @@ textarea:focus {
 }
 
 .typeBadge {
-  border: 1px solid rgba(244, 63, 94, .16);
+  border: 1px solid rgba(11, 132, 255, .18);
   border-radius: 999px;
   padding: 7px 10px;
-  background: rgba(244, 63, 94, .08);
-  color: var(--accent-dark);
+  background: rgba(11, 132, 255, .08);
+  color: #0759b0;
   font-size: 12px;
   font-weight: 850;
   white-space: nowrap;
@@ -544,7 +537,7 @@ textarea:focus {
   height: 100%;
   width: 0;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--blue), var(--accent));
+  background: var(--blue);
 }
 
 .meter[data-state="warn"] .bar { background: var(--warn); }
@@ -608,7 +601,7 @@ textarea:focus {
 }
 
 .preset.active {
-  background: linear-gradient(135deg, #11131a, #222638);
+  background: #090b10;
   color: #fff;
   border-color: transparent;
   box-shadow: 0 14px 36px rgba(15, 17, 23, .14);
@@ -718,6 +711,180 @@ footer {
 .footerRow a {
   color: var(--ink);
   font-weight: 750;
+}
+
+/* Remotion reference pass: dark developer-product surface. */
+:root {
+  --bg: #05070d;
+  --ink: #f7f9ff;
+  --muted: #a4adbd;
+  --faint: #111722;
+  --panel: #0c111a;
+  --line: #f7f9ff;
+  --line-soft: #273142;
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(11, 132, 255, .24), transparent 28%),
+    radial-gradient(circle at 82% 16%, rgba(255, 77, 46, .16), transparent 26%),
+    linear-gradient(180deg, #05070d 0%, #070a12 46%, #0b0f17 100%);
+  color: var(--ink);
+}
+
+header {
+  background: rgba(5, 7, 13, .82);
+  border-bottom-color: rgba(255, 255, 255, .1);
+}
+
+.mark {
+  background: #0b1018;
+  border-color: rgba(255, 255, 255, .2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .32);
+}
+
+.mark::before {
+  background: #fff;
+}
+
+.mark::after {
+  box-shadow: 0 0 0 3px #0b1018;
+}
+
+nav a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .14);
+}
+
+.eyebrow {
+  color: #dce7ff;
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .12);
+}
+
+.intro,
+.hint,
+.copyBlock p,
+.faq p {
+  color: #d0d7e6;
+}
+
+.heroButton {
+  background: #fff;
+  color: #05070d;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .36);
+}
+
+.heroButton.secondary {
+  color: #fff;
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .14);
+}
+
+.routeCard {
+  color: #fff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .08) 0%, rgba(255, 255, 255, .035) 100%);
+  border-color: rgba(255, 255, 255, .14);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .34);
+}
+
+.routeCard p {
+  color: #b6bfce;
+}
+
+.routeChrome span {
+  background: rgba(255, 255, 255, .24);
+}
+
+.routeCard code {
+  background: #02040a;
+}
+
+.routeSteps span {
+  color: #dbe4f4;
+  background: rgba(255, 255, 255, .08);
+}
+
+.tool {
+  background: #0b1018;
+  border-color: rgba(255, 255, 255, .12);
+  box-shadow: 0 30px 96px rgba(0, 0, 0, .38);
+}
+
+.editor {
+  background: #0b1018;
+}
+
+.inspector {
+  background: linear-gradient(180deg, #101723 0%, #0c121b 100%);
+}
+
+.btn,
+.chip,
+.source {
+  color: #f7f9ff;
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .14);
+}
+
+.btn.primary,
+.chip.active {
+  color: #05070d;
+  background: #fff;
+  border-color: #fff;
+}
+
+.btn:hover,
+.chip:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .28);
+}
+
+textarea {
+  color: #f7f9ff;
+  background: linear-gradient(180deg, #070b12, #0a0f17);
+}
+
+textarea::placeholder {
+  color: #8792a5;
+}
+
+.stats,
+.resultCard,
+.presetPanel,
+.markdownPanel {
+  background: #070b12;
+  border-color: rgba(255, 255, 255, .1);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .24);
+}
+
+.typeBadge {
+  color: #8cc8ff;
+}
+
+.meter {
+  background: #1b2432;
+}
+
+.source:hover {
+  color: #05070d;
+  background: #fff;
+}
+
+.preset {
+  color: #f7f9ff;
+  background: #0b111a;
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.preset.active {
+  color: #05070d;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .28);
+}
+
+.footerRow a {
+  color: #fff;
 }
 
 @media (max-width: 980px) {
