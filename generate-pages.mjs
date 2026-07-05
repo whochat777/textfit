@@ -64,26 +64,7 @@ function pageHtml({ preset, root = false }) {
         <p class="eyebrow">Platform copy checker</p>
         <h1>${escapeHtml(h1)}</h1>
         <p class="intro">${escapeHtml(intro)}</p>
-        <div class="heroLinks" aria-label="Primary actions">
-          <a class="heroButton" href="#tool">Start checking</a>
-          <a class="heroButton secondary" href="#presets">View presets</a>
-        </div>
       </div>
-      <aside class="routeCard" aria-label="Current preset URL">
-        <div class="routeChrome" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-        <div>
-          <strong>Open a task page.</strong>
-          <p>Specific URLs land on the right counter immediately.</p>
-        </div>
-        <code>textfit <span data-route-label>/${preset ? preset.slug : "youtube-title-length-checker"}/</span></code>
-        <div class="routeSteps" aria-label="Workflow">
-          <span>Paste</span>
-          <span>Count</span>
-          <span>Ship</span>
-        </div>
-      </aside>
     </section>
 
     <section class="shell tool" id="tool" aria-label="TextFit counter">

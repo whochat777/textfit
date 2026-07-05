@@ -136,11 +136,8 @@ main {
 
 .hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(310px, 390px);
-  gap: 56px;
-  align-items: center;
-  padding: 56px 0 44px;
+  display: block;
+  padding: 52px 0 34px;
 }
 
 .eyebrow,
@@ -181,118 +178,6 @@ h1 {
   font-size: clamp(19px, 2vw, 23px);
   line-height: 1.46;
   text-wrap: pretty;
-}
-
-.heroLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.heroButton {
-  min-height: 46px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 0 19px;
-  background: var(--ink);
-  color: #fff;
-  font-weight: 900;
-  box-shadow: 0 15px 34px rgba(15, 17, 23, .18);
-}
-
-.heroButton.secondary {
-  color: var(--ink);
-  background: #fff;
-  border: 1px solid rgba(15, 17, 23, .12);
-  box-shadow: none;
-}
-
-.routeCard {
-  border: 1px solid rgba(15, 17, 23, .12);
-  border-radius: 22px;
-  background:
-    linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
-  color: var(--ink);
-  padding: 18px;
-  min-height: 238px;
-  display: grid;
-  align-content: space-between;
-  box-shadow: 0 18px 44px rgba(15, 17, 23, .1);
-}
-
-.routeChrome {
-  display: flex;
-  gap: 7px;
-}
-
-.routeChrome span {
-  width: 11px;
-  height: 11px;
-  border-radius: 999px;
-  background: var(--line-soft);
-}
-
-.routeChrome span:nth-child(1) { background: var(--accent); }
-.routeChrome span:nth-child(2) { background: #f7c948; }
-.routeChrome span:nth-child(3) { background: var(--blue); }
-
-.routeCard p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.45;
-  font-size: 14px;
-}
-
-.routeCard strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 20px;
-  letter-spacing: -.02em;
-}
-
-.routeCard code {
-  display: block;
-  padding: 16px;
-  border-radius: 14px;
-  background: #090b10;
-  color: #fff;
-  font-family: "SF Mono", "Courier New", ui-monospace, monospace;
-  font-size: 13px;
-  line-height: 1.45;
-  overflow-wrap: anywhere;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08);
-}
-
-.routeCard code::before {
-  content: "$ ";
-  color: var(--blue);
-}
-
-.routeSteps {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.routeSteps span {
-  min-height: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: #eef1f7;
-  color: #393d49;
-  font-size: 12px;
-  font-weight: 900;
-}
-
-.routeCard .mono {
-  color: #fff;
-  overflow-wrap: anywhere;
-  text-transform: none;
 }
 
 .tool {
@@ -770,42 +655,6 @@ nav a:hover {
   color: #d0d7e6;
 }
 
-.heroButton {
-  background: #fff;
-  color: #05070d;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, .36);
-}
-
-.heroButton.secondary {
-  color: #fff;
-  background: rgba(255, 255, 255, .06);
-  border-color: rgba(255, 255, 255, .14);
-}
-
-.routeCard {
-  color: #fff;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .08) 0%, rgba(255, 255, 255, .035) 100%);
-  border-color: rgba(255, 255, 255, .14);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, .34);
-}
-
-.routeCard p {
-  color: #b6bfce;
-}
-
-.routeChrome span {
-  background: rgba(255, 255, 255, .24);
-}
-
-.routeCard code {
-  background: #02040a;
-}
-
-.routeSteps span {
-  color: #dbe4f4;
-  background: rgba(255, 255, 255, .08);
-}
-
 .tool {
   background: #0b1018;
   border-color: rgba(255, 255, 255, .12);
@@ -931,11 +780,6 @@ textarea::placeholder {
 
   .intro {
     font-size: 17px;
-  }
-
-  .routeCard {
-    min-height: 220px;
-    box-shadow: 0 18px 52px rgba(15, 17, 23, .12);
   }
 
   .toolbar,

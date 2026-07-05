@@ -19,7 +19,6 @@
   const clearButton = document.querySelector("[data-clear]");
   const sampleButton = document.querySelector("[data-sample]");
   const linkButton = document.querySelector("[data-link]");
-  const routeLabel = document.querySelector("[data-route-label]");
   const bodyPreset = document.body.dataset.preset;
 
   let activeCategory = "All";
@@ -152,7 +151,6 @@
     if (pushState && history.replaceState) {
       history.replaceState(null, "", `/${preset.slug}/`);
     }
-    routeLabel.textContent = `/${preset.slug}/`;
     renderPresets();
     renderResult();
   }
