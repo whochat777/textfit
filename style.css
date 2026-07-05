@@ -770,7 +770,7 @@ textarea::placeholder {
 }
 
 /* Laptop workbench: keep the real tool inside one MacBook Air viewport. */
-@media (min-width: 761px) {
+@media (min-width: 641px) {
   main {
     padding: 18px 0 34px;
   }
@@ -989,7 +989,7 @@ textarea::placeholder {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 640px) {
   .hero,
   .tool,
   .content {
