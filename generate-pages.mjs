@@ -19,10 +19,8 @@ function pageHtml({ preset, root = false }) {
     : "TextFit is a browser-based character counter for platform copy. Check characters, words, weighted CJK width, bytes, Markdown structure, and field limits for ads, search, apps, Japan, and China workflows.";
   const canonical = preset ? `${domain}/${preset.slug}/` : `${domain}/`;
   const bodyPreset = preset ? preset.id : "youtube-title";
-  const h1 = preset ? `Check ${preset.label} before it goes live.` : "Fit copy to the field before you publish.";
-  const intro = preset
-    ? `Paste copy once, then see the ${preset.type.toLowerCase()} for ${preset.platform} alongside general text, CJK, byte, and Markdown counts.`
-    : "A focused counter for titles, descriptions, ads, metadata, and CJK-heavy platform copy. One text box, clear limits, source links where public rules exist.";
+  const h1 = "Fit copy to the field before you publish.";
+  const intro = "A focused counter for titles, descriptions, ads, metadata, and CJK-heavy platform copy. One text box, clear limits, source links where public rules exist.";
   return `<!doctype html>
 <html lang="en">
 <head>
