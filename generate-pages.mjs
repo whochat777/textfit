@@ -41,7 +41,7 @@ function pageHtml({ preset, root = false }) {
   <meta name="twitter:card" content="summary">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459645012393561" crossorigin="anonymous"></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b9015d1afb5641debfd1616cb7368c53"}'></script>
-  <link rel="stylesheet" href="/style.css?v=20260706-6">
+  <link rel="stylesheet" href="/style.css?v=20260706-7">
 </head>
 <body data-preset="${bodyPreset}">
   <header>
@@ -155,8 +155,8 @@ function pageHtml({ preset, root = false }) {
       <span><a href="/#tool">Tool</a> · <a href="/#faq">FAQ</a> · <a href="mailto:support@solidscreen.xyz">Contact</a></span>
     </div>
   </footer>
-  <script src="/data.js?v=20260706-6"></script>
-  <script src="/app.js?v=20260706-6"></script>
+  <script src="/data.js?v=20260706-7"></script>
+  <script src="/app.js?v=20260706-7"></script>
 </body>
 </html>
 `;

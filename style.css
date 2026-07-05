@@ -657,24 +657,24 @@ nav a:hover {
 
 .tool {
   background: #0b1018;
-  border-color: rgba(255, 255, 255, .12);
-  box-shadow: 0 30px 96px rgba(0, 0, 0, .38);
+  border-color: #3a4559;
+  box-shadow: 0 30px 96px rgba(0, 0, 0, .38), inset 0 1px 0 rgba(255, 255, 255, .06);
 }
 
 .editor {
-  background: #0b1018;
+  background: #080d15;
 }
 
 .inspector {
-  background: linear-gradient(180deg, #101723 0%, #0c121b 100%);
+  background: linear-gradient(180deg, #121a27 0%, #0d141f 100%);
 }
 
 .btn,
 .chip,
 .source {
   color: #f7f9ff;
-  background: rgba(255, 255, 255, .06);
-  border-color: rgba(255, 255, 255, .14);
+  background: #182233;
+  border-color: #526078;
 }
 
 .btn.primary,
@@ -691,7 +691,8 @@ nav a:hover {
 
 textarea {
   color: #f7f9ff;
-  background: linear-gradient(180deg, #070b12, #0a0f17);
+  background: linear-gradient(180deg, #0d1420, #0a1019);
+  border-color: #334055;
 }
 
 textarea::placeholder {
@@ -702,8 +703,8 @@ textarea::placeholder {
 .resultCard,
 .presetPanel,
 .markdownPanel {
-  background: #070b12;
-  border-color: rgba(255, 255, 255, .1);
+  background: #0a1019;
+  border-color: #334055;
   box-shadow: 0 18px 40px rgba(0, 0, 0, .24);
 }
 
@@ -722,14 +723,46 @@ textarea::placeholder {
 
 .preset {
   color: #f7f9ff;
-  background: #0b111a;
-  border-color: rgba(255, 255, 255, .1);
+  background: #111827;
+  border-color: #40506a;
 }
 
 .preset.active {
   color: #05070d;
   background: #fff;
   box-shadow: 0 18px 42px rgba(0, 0, 0, .28);
+}
+
+.presetGrid {
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 9px;
+}
+
+.preset {
+  min-height: 96px;
+  padding: 12px;
+  align-content: space-between;
+}
+
+.presetTop {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  align-items: start;
+}
+
+.presetTop span:last-child {
+  opacity: .72;
+  font-size: 10px;
+}
+
+.preset strong {
+  font-size: 15px;
+  line-height: 1.08;
+}
+
+.preset small {
+  font-size: 12px;
 }
 
 .footerRow a {
@@ -746,6 +779,19 @@ textarea::placeholder {
   .editor {
     border-right: 0;
     border-bottom: 1px solid var(--line-soft);
+    grid-template-rows: auto 260px auto;
+  }
+
+  .tool {
+    min-height: 0;
+  }
+
+  .inspector {
+    order: -1;
+  }
+
+  textarea {
+    min-height: 0;
   }
 
   .stats {
@@ -792,6 +838,10 @@ textarea::placeholder {
   .editor,
   .inspector {
     padding: 14px;
+  }
+
+  textarea {
+    min-height: 0;
   }
 
   .score strong {
