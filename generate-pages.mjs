@@ -41,7 +41,7 @@ function pageHtml({ preset, root = false }) {
   <meta name="twitter:card" content="summary">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459645012393561" crossorigin="anonymous"></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b9015d1afb5641debfd1616cb7368c53"}'></script>
-  <link rel="stylesheet" href="/style.css?v=20260706-4">
+  <link rel="stylesheet" href="/style.css?v=20260706-5">
 </head>
 <body data-preset="${bodyPreset}">
   <header>
@@ -64,13 +64,25 @@ function pageHtml({ preset, root = false }) {
         <p class="eyebrow">Platform copy checker</p>
         <h1>${escapeHtml(h1)}</h1>
         <p class="intro">${escapeHtml(intro)}</p>
+        <div class="heroLinks" aria-label="Primary actions">
+          <a class="heroButton" href="#tool">Start checking</a>
+          <a class="heroButton secondary" href="#presets">View presets</a>
+        </div>
       </div>
       <aside class="routeCard" aria-label="Current preset URL">
-        <div>
-          <strong>One tool, many entry pages.</strong>
-          <p>Every preset has a direct URL for search, AI recommendations, and repeat work.</p>
+        <div class="routeChrome" aria-hidden="true">
+          <span></span><span></span><span></span>
         </div>
-        <span class="mono" data-route-label>/${preset ? preset.slug : "youtube-title-length-checker"}/</span>
+        <div>
+          <strong>Open a task page.</strong>
+          <p>Specific URLs land on the right counter immediately.</p>
+        </div>
+        <code>textfit <span data-route-label>/${preset ? preset.slug : "youtube-title-length-checker"}/</span></code>
+        <div class="routeSteps" aria-label="Workflow">
+          <span>Paste</span>
+          <span>Count</span>
+          <span>Ship</span>
+        </div>
       </aside>
     </section>
 
@@ -162,8 +174,8 @@ function pageHtml({ preset, root = false }) {
       <span><a href="/#tool">Tool</a> · <a href="/#faq">FAQ</a> · <a href="mailto:support@solidscreen.xyz">Contact</a></span>
     </div>
   </footer>
-  <script src="/data.js?v=20260706-4"></script>
-  <script src="/app.js?v=20260706-4"></script>
+  <script src="/data.js?v=20260706-5"></script>
+  <script src="/app.js?v=20260706-5"></script>
 </body>
 </html>
 `;
