@@ -40,6 +40,7 @@ function pageHtml({ preset, root = false }) {
   <meta property="og:url" content="${canonical}">
   <meta name="twitter:card" content="summary">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459645012393561" crossorigin="anonymous"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b9015d1afb5641debfd1616cb7368c53"}'></script>
   <link rel="stylesheet" href="/style.css?v=20260706-4">
 </head>
 <body data-preset="${bodyPreset}">
