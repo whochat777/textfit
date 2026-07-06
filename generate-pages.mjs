@@ -28,7 +28,7 @@ function pageHtml({ preset, root = false }) {
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="${canonical}">
-  <link rel="icon" href="/favicon.svg?v=20260706-19" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg?v=20260706-20" type="image/svg+xml">
   <meta property="og:site_name" content="TextFit">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
@@ -37,7 +37,7 @@ function pageHtml({ preset, root = false }) {
   <meta name="twitter:card" content="summary">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459645012393561" crossorigin="anonymous"></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b9015d1afb5641debfd1616cb7368c53"}'></script>
-  <link rel="stylesheet" href="/style.css?v=20260706-19">
+  <link rel="stylesheet" href="/style.css?v=20260706-20">
 </head>
 <body data-preset="${bodyPreset}">
   <header>
@@ -178,8 +178,8 @@ function pageHtml({ preset, root = false }) {
       <span data-i18n="footerText">(c) 2026 Solidscreen. TextFit is a Solidscreen product.</span>
     </div>
   </footer>
-  <script src="/data.js?v=20260706-19"></script>
-  <script src="/app.js?v=20260706-19"></script>
+  <script src="/data.js?v=20260706-20"></script>
+  <script src="/app.js?v=20260706-20"></script>
 </body>
 </html>
 `;
