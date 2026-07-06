@@ -209,7 +209,7 @@ h1 {
 }
 
 .adBandInner {
-  min-height: 96px;
+  min-height: 192px;
   border: 1px solid #2b3750;
   border-radius: 24px;
   background:
@@ -875,7 +875,7 @@ textarea::placeholder {
   }
 
   .adBandInner {
-    min-height: 74px;
+    min-height: 148px;
     border-radius: 20px;
     padding: 14px 18px;
   }
@@ -1106,7 +1106,7 @@ textarea::placeholder {
   }
 
   .adBandInner {
-    min-height: 86px;
+    min-height: 172px;
     align-items: flex-start;
     flex-direction: column;
     border-radius: 18px;
