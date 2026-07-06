@@ -216,12 +216,16 @@ h1 {
     linear-gradient(135deg, rgba(11, 132, 255, .08), rgba(255, 255, 255, .02)),
     #09101d;
   color: #eef3ff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 18px 24px;
+  display: block;
+  overflow: hidden;
+  padding: 0;
   box-shadow: 0 18px 48px rgba(0, 0, 0, .22);
+}
+
+.adBandInner > .adsbygoogle {
+  display: block;
+  width: 100%;
+  min-height: 192px;
 }
 
 .adBandInner span {
@@ -877,7 +881,10 @@ textarea::placeholder {
   .adBandInner {
     min-height: 148px;
     border-radius: 20px;
-    padding: 14px 18px;
+  }
+
+  .adBandInner > .adsbygoogle {
+    min-height: 148px;
   }
 
   .eyebrow {
@@ -1107,9 +1114,11 @@ textarea::placeholder {
 
   .adBandInner {
     min-height: 172px;
-    align-items: flex-start;
-    flex-direction: column;
     border-radius: 18px;
+  }
+
+  .adBandInner > .adsbygoogle {
+    min-height: 172px;
   }
 
   .editor {
