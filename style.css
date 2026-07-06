@@ -244,6 +244,9 @@ h1 {
 
 .btn,
 .chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 36px;
   border: 1px solid rgba(15, 17, 23, .12);
   border-radius: 999px;
@@ -953,6 +956,7 @@ textarea::placeholder {
   }
 
   .presetGrid {
+    height: 192px;
     min-height: 0;
     overflow: auto;
     padding-right: 4px;

@@ -24,6 +24,7 @@
   let activeCategory = "All";
   let activePreset = byId[bodyPreset] || bySlug[getSlugFromPath()] || presets[0];
   let markdownMode = false;
+  let isComposing = false;
 
   function getSlugFromPath() {
     return window.location.pathname.split("/").filter(Boolean).pop() || "";
@@ -104,8 +105,8 @@
       return { label: `${preset.limit - metric} left`, state: "ok", max: preset.limit };
     }
     if (preset.recommendedMax) {
-      if (metric < preset.recommendedMin) return { label: `${preset.recommendedMin - metric} short`, state: "ok", max: preset.recommendedMax };
-      if (metric > preset.recommendedMax) return { label: `${metric - preset.recommendedMax} over guide`, state: "ok", max: preset.recommendedMax };
+      if (metric < preset.recommendedMin) return { label: `${preset.recommendedMin - metric} short`, state: "bad", max: preset.recommendedMax };
+      if (metric > preset.recommendedMax) return { label: `${metric - preset.recommendedMax} over guide`, state: "bad", max: preset.recommendedMax };
       return { label: "in range", state: "ok", max: preset.recommendedMax };
     }
     return { label: "ready", state: "ok", max: Math.max(metric, 1) };
@@ -196,25 +197,52 @@
   }
 
   function copyText() {
-    navigator.clipboard.writeText(textarea.value || "").then(() => {
-      copyButton.textContent = "Copied";
-      window.setTimeout(() => { copyButton.textContent = "Copy text"; }, 1200);
-    });
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const restoreScroll = () => {
+      copyButton.blur();
+      window.scrollTo(scrollX, scrollY);
+      window.requestAnimationFrame(() => window.scrollTo(scrollX, scrollY));
+    };
+    restoreScroll();
+    Promise.resolve()
+      .then(() => navigator.clipboard.writeText(textarea.value || ""))
+      .catch(() => {})
+      .finally(restoreScroll);
   }
 
   function copyLink() {
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
     const url = `${window.location.origin}/${activePreset.slug}/`;
-    navigator.clipboard.writeText(url).then(() => {
-      linkButton.textContent = "Link copied";
-      window.setTimeout(() => { linkButton.textContent = "Copy preset link"; }, 1200);
-    });
+    const restoreScroll = () => {
+      linkButton.blur();
+      window.scrollTo(scrollX, scrollY);
+      window.requestAnimationFrame(() => window.scrollTo(scrollX, scrollY));
+    };
+    restoreScroll();
+    Promise.resolve()
+      .then(() => navigator.clipboard.writeText(url))
+      .catch(() => {})
+      .finally(restoreScroll);
   }
 
-  textarea.addEventListener("input", renderResult);
+  textarea.addEventListener("compositionstart", () => {
+    isComposing = true;
+  });
+  textarea.addEventListener("compositionend", () => {
+    isComposing = false;
+    renderResult();
+  });
+  textarea.addEventListener("input", () => {
+    if (!isComposing) renderResult();
+  });
   markdownToggle.addEventListener("change", () => {
     markdownMode = markdownToggle.checked;
     renderResult();
   });
+  copyButton.addEventListener("mousedown", (event) => event.preventDefault());
+  linkButton.addEventListener("mousedown", (event) => event.preventDefault());
   copyButton.addEventListener("click", copyText);
   linkButton.addEventListener("click", copyLink);
   clearButton.addEventListener("click", () => {
