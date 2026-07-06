@@ -179,6 +179,38 @@ h1 {
   text-wrap: pretty;
 }
 
+.adBand {
+  padding: 0 0 18px;
+}
+
+.adBandInner {
+  min-height: 96px;
+  border: 1px solid #2b3750;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(11, 132, 255, .08), rgba(255, 255, 255, .02)),
+    #09101d;
+  color: #eef3ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 24px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .22);
+}
+
+.adBandInner span {
+  color: #9da9bd;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.adBandInner strong {
+  font-size: 18px;
+}
+
 .tool {
   border: 1px solid rgba(15, 17, 23, .09);
   border-radius: 26px;
@@ -789,7 +821,17 @@ textarea::placeholder {
   }
 
   .hero {
-    padding: 28px 0 20px;
+    padding: 28px 0 16px;
+  }
+
+  .adBand {
+    padding-bottom: 14px;
+  }
+
+  .adBandInner {
+    min-height: 74px;
+    border-radius: 20px;
+    padding: 14px 18px;
   }
 
   .eyebrow {
@@ -986,11 +1028,12 @@ textarea::placeholder {
   }
 
   .markdownPanel {
-    min-height: 46px;
+    min-height: 54px;
+    border-radius: 18px;
   }
 
   .miniStat {
-    min-height: 46px;
+    min-height: 54px;
     padding: 8px 10px;
   }
 
@@ -1005,9 +1048,21 @@ textarea::placeholder {
 
 @media (max-width: 640px) {
   .hero,
+  .adBand,
   .tool,
   .content {
     grid-template-columns: 1fr;
+  }
+
+  .adBand {
+    padding-bottom: 18px;
+  }
+
+  .adBandInner {
+    min-height: 86px;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 18px;
   }
 
   .editor {
