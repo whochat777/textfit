@@ -16,7 +16,7 @@
   <meta name="twitter:card" content="summary">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459645012393561" crossorigin="anonymous"></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b9015d1afb5641debfd1616cb7368c53"}'></script>
-  <link rel="stylesheet" href="/style.css?v=20260706-15">
+  <link rel="stylesheet" href="/style.css?v=20260706-16">
 </head>
 <body data-preset="wechat-title">
   <header>
@@ -26,26 +26,36 @@
         <span>TextFit</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="/#tool">Tool</a>
-        <a href="/#presets">Presets</a>
-        <a href="/#faq">FAQ</a>
-        <a href="https://solidscreen.xyz/">Solidscreen</a>
+        <a href="#tool" data-i18n="navTool">Tool</a>
+        <a href="#presets" data-i18n="navPresets">Presets</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="#privacy" data-i18n="navPrivacy">Privacy</a>
+        <a href="#terms" data-i18n="navTerms">Terms</a>
       </nav>
+      <label class="languageControl">
+        <span data-i18n="languageLabel">Language</span>
+        <select data-language-select aria-label="Language">
+          <option value="en">EN</option>
+          <option value="ja">日本語</option>
+          <option value="zh-Hans">简体中文</option>
+          <option value="zh-Hant">繁體中文</option>
+        </select>
+      </label>
     </div>
   </header>
   <main>
     <section class="shell hero">
       <div>
-        <p class="eyebrow">Platform copy checker</p>
-        <h1>Fit copy to the field before you publish.</h1>
-        <p class="intro">A focused counter for titles, descriptions, ads, metadata, and CJK-heavy platform copy. One text box, clear limits, source links where public rules exist.</p>
+        <p class="eyebrow" data-i18n="eyebrow">Platform copy checker</p>
+        <h1 data-i18n="heroTitle">Fit copy to the field before you publish.</h1>
+        <p class="intro" data-i18n="heroIntro">A focused counter for titles, descriptions, ads, metadata, and CJK-heavy platform copy. One text box, clear limits, source links where public rules exist.</p>
       </div>
     </section>
 
     <section class="shell adBand" aria-label="Advertisement">
       <div class="adBandInner">
-        <span>Advertisement</span>
-        <strong>Horizontal display slot</strong>
+        <span data-i18n="adLabel">Advertisement</span>
+        <strong data-i18n="adTitle">Horizontal display slot</strong>
       </div>
     </section>
 
@@ -53,23 +63,23 @@
       <div class="editor">
         <div class="toolbar">
           <div class="toolTitle">
-            <strong>Paste text</strong>
-            <span>Counts run locally in your browser.</span>
+            <strong data-i18n="pasteText">Paste text</strong>
+            <span data-i18n="localCounts">Counts run locally in your browser.</span>
           </div>
           <div class="actions">
             <label class="switch"><input type="checkbox" data-markdown-toggle> Markdown</label>
-            <button class="btn" type="button" data-sample>Load sample</button>
-            <button class="btn" type="button" data-clear>Reset</button>
-            <button class="btn primary" type="button" data-copy>Copy text</button>
+            <button class="btn" type="button" data-sample data-i18n="loadSample">Load sample</button>
+            <button class="btn" type="button" data-clear data-i18n="reset">Reset</button>
+            <button class="btn primary" type="button" data-copy data-i18n="copyText">Copy text</button>
           </div>
         </div>
-        <textarea data-text-input spellcheck="true" placeholder="Paste a title, description, ad headline, post, or Markdown draft here."></textarea>
+        <textarea data-text-input data-i18n-placeholder="textareaPlaceholder" spellcheck="true" placeholder="Paste a title, description, ad headline, post, or Markdown draft here."></textarea>
         <div class="stats" aria-label="Text statistics">
-          <div class="stat"><span>Characters</span><strong data-stat="chars">0</strong></div>
-          <div class="stat"><span>Weighted CJK</span><strong data-stat="weighted">0</strong></div>
-          <div class="stat"><span>Bytes</span><strong data-stat="bytes">0</strong></div>
-          <div class="stat"><span>Words</span><strong data-stat="words">0</strong></div>
-          <div class="stat"><span>Reading</span><strong data-stat="read">1 min</strong></div>
+          <div class="stat"><span data-i18n="characters">Characters</span><strong data-stat="chars">0</strong></div>
+          <div class="stat"><span data-i18n="weightedCjk">Weighted CJK</span><strong data-stat="weighted">0</strong></div>
+          <div class="stat"><span data-i18n="bytes">Bytes</span><strong data-stat="bytes">0</strong></div>
+          <div class="stat"><span data-i18n="words">Words</span><strong data-stat="words">0</strong></div>
+          <div class="stat"><span data-i18n="reading">Reading</span><strong data-stat="read">1 min</strong></div>
         </div>
       </div>
 
@@ -90,53 +100,65 @@
 
         <section class="presetPanel" id="presets">
           <div class="panelHead">
-            <h2>Presets</h2>
-            <button class="btn" type="button" data-link>Copy preset link</button>
+            <h2 data-i18n="presets">Presets</h2>
+            <button class="btn" type="button" data-link data-i18n="copyRuleLink">Copy rule link</button>
           </div>
           <div class="tabs" data-category-tabs aria-label="Preset categories"></div>
           <div class="presetGrid" data-preset-grid></div>
         </section>
 
         <section class="markdownPanel" aria-label="Markdown statistics">
-          <div class="miniStat"><span>Lines</span><strong data-stat="lines">0</strong></div>
-          <div class="miniStat"><span>Paragraphs</span><strong data-stat="paragraphs">0</strong></div>
-          <div class="miniStat"><span>Headings</span><strong data-stat="headings">0</strong></div>
-          <div class="miniStat"><span>Links</span><strong data-stat="links">0</strong></div>
+          <div class="miniStat"><span data-i18n="lines">Lines</span><strong data-stat="lines">0</strong></div>
+          <div class="miniStat"><span data-i18n="paragraphs">Paragraphs</span><strong data-stat="paragraphs">0</strong></div>
+          <div class="miniStat"><span data-i18n="headings">Headings</span><strong data-stat="headings">0</strong></div>
+          <div class="miniStat"><span data-i18n="links">Links</span><strong data-stat="links">0</strong></div>
         </section>
       </aside>
     </section>
 
     <section class="shell content">
       <div class="copyBlock">
-        <p class="sectionLabel">How TextFit works</p>
-        <h2>Specific pages, same fast tool.</h2>
-        <p>TextFit gives concrete URLs to concrete writing jobs. A YouTube title page, a Google Ads headline page, and a WeChat title page all open the same counter with the right preset already selected. Public official limits are linked from the result card; writing-guide presets are labeled as practical ranges instead of hard rules.</p>
+        <p class="sectionLabel" data-i18n="howLabel">How TextFit works</p>
+        <h2 data-i18n="howTitle">Specific pages, same fast tool.</h2>
+        <p data-i18n="howBody">TextFit gives concrete URLs to concrete writing jobs. A YouTube title page, a Google Ads headline page, and a WeChat title page all open the same counter with the right preset already selected. Public official limits are linked from the result card; writing-guide presets are labeled as practical ranges instead of hard rules.</p>
       </div>
       <div class="faq" id="faq">
         <p class="sectionLabel">FAQ</p>
-        <h2>Useful before publishing.</h2>
+        <h2 data-i18n="faqTitle">Useful before publishing.</h2>
         <div class="faqItem">
-          <h3>Does TextFit upload my text?</h3>
-          <p>No. The current version counts text in your browser with local JavaScript.</p>
+          <h3 data-i18n="faqUploadQ">Does TextFit upload my text?</h3>
+          <p data-i18n="faqUploadA">No. The current version counts text in your browser with local JavaScript.</p>
         </div>
         <div class="faqItem">
-          <h3>Why are some presets verified and others guides?</h3>
-          <p>Some platforms publish exact field limits. Others change UI behavior or do not publish a stable public limit, so TextFit labels those as writing ranges.</p>
+          <h3 data-i18n="faqPresetQ">Why are some presets verified and others guides?</h3>
+          <p data-i18n="faqPresetA">Some platforms publish exact field limits. Others change UI behavior or do not publish a stable public limit, so TextFit labels those as writing ranges.</p>
         </div>
         <div class="faqItem">
-          <h3>What is weighted CJK counting?</h3>
-          <p>Some ad systems count Japanese, Chinese, and Korean full-width characters as 2. TextFit shows that count next to normal characters and bytes.</p>
+          <h3 data-i18n="faqCjkQ">What is weighted CJK counting?</h3>
+          <p data-i18n="faqCjkA">Some ad systems count Japanese, Chinese, and Korean full-width characters as 2. TextFit shows that count next to normal characters and bytes.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="shell policies">
+      <div class="policyBlock" id="privacy">
+        <p class="sectionLabel" data-i18n="privacyLabel">Privacy</p>
+        <h2 data-i18n="privacyTitle">Privacy notice</h2>
+        <p data-i18n="privacyBody">TextFit counts pasted text in your browser. The current version does not upload your source text to a Solidscreen server. The site may use Cloudflare Web Analytics and Google AdSense, which can process standard visit, device, and advertising data according to their own policies.</p>
+      </div>
+      <div class="policyBlock" id="terms">
+        <p class="sectionLabel" data-i18n="termsLabel">Terms</p>
+        <h2 data-i18n="termsTitle">Terms of use</h2>
+        <p data-i18n="termsBody">TextFit is provided as a practical browser tool. You are responsible for the text you paste, the results you use, and the rules of any platform where you publish. Platform limits can change, so source links and writing ranges should be checked when accuracy matters.</p>
       </div>
     </section>
   </main>
   <footer>
     <div class="shell footerRow">
-      <span>(c) 2026 Solidscreen. TextFit is a Solidscreen product.</span>
-      <span><a href="/#tool">Tool</a> · <a href="/#faq">FAQ</a> · <a href="mailto:support@solidscreen.xyz">Contact</a></span>
+      <span data-i18n="footerText">(c) 2026 Solidscreen. TextFit is a Solidscreen product.</span>
     </div>
   </footer>
-  <script src="/data.js?v=20260706-15"></script>
-  <script src="/app.js?v=20260706-15"></script>
+  <script src="/data.js?v=20260706-16"></script>
+  <script src="/app.js?v=20260706-16"></script>
 </body>
 </html>
