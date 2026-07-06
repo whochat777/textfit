@@ -39,7 +39,7 @@ function pageHtml({ preset, root = false }) {
   <meta name="twitter:card" content="summary">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459645012393561" crossorigin="anonymous"></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b9015d1afb5641debfd1616cb7368c53"}'></script>
-  <link rel="stylesheet" href="/style.css?v=20260706-16">
+  <link rel="stylesheet" href="/style.css?v=20260706-17">
 </head>
 <body data-preset="${bodyPreset}">
   <header>
@@ -91,7 +91,6 @@ function pageHtml({ preset, root = false }) {
           </div>
           <div class="actions">
             <label class="switch"><input type="checkbox" data-markdown-toggle> Markdown</label>
-            <button class="btn" type="button" data-sample data-i18n="loadSample">Load sample</button>
             <button class="btn" type="button" data-clear data-i18n="reset">Reset</button>
             <button class="btn primary" type="button" data-copy data-i18n="copyText">Copy text</button>
           </div>
@@ -181,8 +180,8 @@ function pageHtml({ preset, root = false }) {
       <span data-i18n="footerText">(c) 2026 Solidscreen. TextFit is a Solidscreen product.</span>
     </div>
   </footer>
-  <script src="/data.js?v=20260706-16"></script>
-  <script src="/app.js?v=20260706-16"></script>
+  <script src="/data.js?v=20260706-17"></script>
+  <script src="/app.js?v=20260706-17"></script>
 </body>
 </html>
 `;

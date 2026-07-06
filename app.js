@@ -17,7 +17,6 @@
   const markdownToggle = document.querySelector("[data-markdown-toggle]");
   const copyButton = document.querySelector("[data-copy]");
   const clearButton = document.querySelector("[data-clear]");
-  const sampleButton = document.querySelector("[data-sample]");
   const linkButton = document.querySelector("[data-link]");
   const languageSelect = document.querySelector("[data-language-select]");
   const bodyPreset = document.body.dataset.preset;
@@ -36,7 +35,6 @@
       adTitle: "Horizontal display slot",
       pasteText: "Paste text",
       localCounts: "Counts run locally in your browser.",
-      loadSample: "Load sample",
       reset: "Reset",
       copyText: "Copy text",
       copyRuleLink: "Copy rule link",
@@ -86,7 +84,6 @@
       adTitle: "横長ディスプレイ広告枠",
       pasteText: "テキストを入力",
       localCounts: "カウントはブラウザ内で実行されます。",
-      loadSample: "サンプル",
       reset: "リセット",
       copyText: "本文をコピー",
       copyRuleLink: "ルールリンクをコピー",
@@ -136,7 +133,6 @@
       adTitle: "横向展示广告位",
       pasteText: "粘贴文本",
       localCounts: "计数在你的浏览器本地运行。",
-      loadSample: "加载示例",
       reset: "重置",
       copyText: "复制文本",
       copyRuleLink: "复制规则链接",
@@ -186,7 +182,6 @@
       adTitle: "橫向展示廣告位",
       pasteText: "貼上文字",
       localCounts: "計數在你的瀏覽器本機執行。",
-      loadSample: "載入範例",
       reset: "重置",
       copyText: "複製文字",
       copyRuleLink: "複製規則連結",
@@ -490,12 +485,6 @@
     textarea.focus();
     renderResult();
   });
-  sampleButton.addEventListener("click", () => {
-    textarea.value = activePreset.example || "";
-    textarea.focus();
-    renderResult();
-  });
-
   renderStaticText();
   renderCategories();
   renderPresets();
