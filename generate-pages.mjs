@@ -36,7 +36,7 @@ function pageHtml({ preset, root = false }) {
   <meta property="og:url" content="${canonical}">
   <meta name="twitter:card" content="summary">
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b9015d1afb5641debfd1616cb7368c53"}'></script>
-  <link rel="stylesheet" href="/style.css?v=20260706-20">
+  <link rel="stylesheet" href="/style.css?v=20260707-ads">
 </head>
 <body data-preset="${bodyPreset}">
   <header>
