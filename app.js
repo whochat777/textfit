@@ -101,11 +101,11 @@
   function getStatus(metric, preset) {
     if (preset.limit) {
       if (metric > preset.limit) return { label: `${metric - preset.limit} over`, state: "bad", max: preset.limit };
-      return { label: `${preset.limit - metric} left`, state: metric > preset.limit * .9 ? "warn" : "ok", max: preset.limit };
+      return { label: `${preset.limit - metric} left`, state: "ok", max: preset.limit };
     }
     if (preset.recommendedMax) {
-      if (metric < preset.recommendedMin) return { label: `${preset.recommendedMin - metric} short`, state: "warn", max: preset.recommendedMax };
-      if (metric > preset.recommendedMax) return { label: `${metric - preset.recommendedMax} over guide`, state: "warn", max: preset.recommendedMax };
+      if (metric < preset.recommendedMin) return { label: `${preset.recommendedMin - metric} short`, state: "ok", max: preset.recommendedMax };
+      if (metric > preset.recommendedMax) return { label: `${metric - preset.recommendedMax} over guide`, state: "ok", max: preset.recommendedMax };
       return { label: "in range", state: "ok", max: preset.recommendedMax };
     }
     return { label: "ready", state: "ok", max: Math.max(metric, 1) };
@@ -137,7 +137,7 @@
       button.className = preset.id === activePreset.id ? "preset active" : "preset";
       const rule = preset.limit ? `${preset.limit} ${unitLabel(preset.unit)}` : `${preset.recommendedMin}-${preset.recommendedMax} ${unitLabel(preset.unit)}`;
       button.innerHTML = `
-        <span class="presetTop"><span>${preset.platform}</span><span>${preset.type}</span></span>
+        <span class="presetTop"><span>${preset.platform}</span></span>
         <strong>${preset.field}</strong>
         <small>${rule}</small>
       `;

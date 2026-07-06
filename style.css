@@ -11,7 +11,6 @@
   --blue: #0b84ff;
   --violet: #6d5dfc;
   --ok: #0d7a4f;
-  --warn: #b25b00;
   --bad: #b91c1c;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", sans-serif;
 }
@@ -430,7 +429,6 @@ textarea:focus {
   background: var(--blue);
 }
 
-.meter[data-state="warn"] .bar { background: var(--warn); }
 .meter[data-state="bad"] .bar { background: var(--bad); }
 
 .hint {
@@ -758,24 +756,12 @@ textarea::placeholder {
 }
 
 .presetTop {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3px;
   align-items: start;
-}
-
-.presetTop span:last-child {
-  opacity: .72;
-  font-size: 10px;
 }
 
 .preset strong {
   font-size: 15px;
-  line-height: 1.08;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.16;
 }
 
 .preset small {
@@ -978,10 +964,6 @@ textarea::placeholder {
   }
 
   .presetTop {
-    font-size: 9px;
-  }
-
-  .presetTop span:last-child {
     font-size: 9px;
   }
 
