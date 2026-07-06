@@ -19,11 +19,12 @@
 
 html {
   overflow-x: hidden;
-  scroll-padding-top: 92px;
+  scroll-padding-top: 96px;
 }
 
 body {
   margin: 0;
+  padding-top: 70px;
   background: #fff;
   color: var(--ink);
   overflow-x: hidden;
@@ -50,9 +51,11 @@ button {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background: rgba(255, 255, 255, .84);
   border-bottom: 1px solid rgba(15, 17, 23, .08);
   backdrop-filter: blur(22px);
@@ -609,7 +612,7 @@ textarea:focus {
 
 .content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
   padding: 54px 0 20px;
 }
