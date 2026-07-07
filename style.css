@@ -556,6 +556,68 @@ textarea:focus {
   grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
+.directoryHero {
+  padding-bottom: 18px;
+}
+
+.limitDirectory {
+  display: grid;
+  gap: 26px;
+  padding-bottom: 34px;
+}
+
+.limitGroup {
+  display: grid;
+  gap: 12px;
+}
+
+.limitGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.limitCard {
+  min-height: 164px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: 18px;
+  border: 1px solid rgba(15, 17, 23, .12);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(15, 17, 23, .05);
+}
+
+.limitCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(15, 17, 23, .1);
+}
+
+.limitCard span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.limitCard strong {
+  font-size: 22px;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+}
+
+.limitCard em {
+  color: #3d4350;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.directoryNotes {
+  margin-top: 0;
+}
+
 .preset.active {
   background: #090b10;
   color: #fff;
@@ -1060,6 +1122,10 @@ textarea::placeholder {
     gap: 8px;
   }
 
+  .limitGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .preset {
     min-height: 0;
     padding: 10px;
@@ -1149,6 +1215,14 @@ textarea::placeholder {
 
   .markdownPanel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .limitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .limitCard {
+    min-height: 138px;
   }
 }
 
