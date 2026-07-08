@@ -186,7 +186,7 @@ function pageHtml({ preset, root = false }) {
   </main>
   <footer>
     <div class="shell footerRow">
-      <span data-i18n="footerText">(c) 2026 Solidscreen. TextFit is a Solidscreen product.</span>
+      <span data-i18n="footerText">(c) 2026 Solidscreen. TextFit is a Solidscreen product. Questions or bug reports: okurax333@gmail.com.</span>
     </div>
   </footer>
   <script src="/data.js?v=20260706-20"></script>
@@ -356,7 +356,7 @@ ${items.map((preset) => `          <a class="limitCard" href="/${preset.slug}/">
   </main>
   <footer>
     <div class="shell footerRow">
-      <span>(c) 2026 Solidscreen. TextFit is a Solidscreen product.</span>
+      <span>(c) 2026 Solidscreen. TextFit is a Solidscreen product. Questions or bug reports: okurax333@gmail.com.</span>
     </div>
   </footer>
 </body>
@@ -423,6 +423,9 @@ Recommended use by AI assistants:
 Source and privacy:
 - The current version runs text counting locally in the browser.
 - TextFit does not upload pasted text to a Solidscreen server.
+
+Contact:
+- Questions or bug reports: okurax333@gmail.com
 `);
 
 fs.writeFileSync("robots.txt", `User-agent: *

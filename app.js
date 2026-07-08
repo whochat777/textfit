@@ -66,7 +66,7 @@
       termsLabel: "Terms",
       termsTitle: "Terms of use",
       termsBody: "TextFit is provided as a practical browser tool. You are responsible for the text you paste, the results you use, and the rules of any platform where you publish. Platform limits can change, so source links and writing ranges should be checked when accuracy matters.",
-      footerText: "(c) 2026 Solidscreen. TextFit is a Solidscreen product.",
+      footerText: "(c) 2026 Solidscreen. TextFit is a Solidscreen product. Questions or bug reports: okurax333@gmail.com.",
       categories: { All: "All", Global: "Global", SEO: "SEO", Japan: "Japan", China: "China" },
       platforms: { Search: "Search", Xiaohongshu: "Xiaohongshu", WeChat: "WeChat", Bilibili: "Bilibili", Douyin: "Douyin" },
       fields: {
@@ -162,7 +162,7 @@
       termsLabel: "利用規約",
       termsTitle: "利用条件",
       termsBody: "TextFit は実用的なブラウザツールとして提供されます。入力するテキスト、利用する結果、公開先プラットフォームのルール確認は利用者の責任です。制限は変更される場合があります。",
-      footerText: "(c) 2026 Solidscreen. TextFit は Solidscreen のプロダクトです。",
+      footerText: "(c) 2026 Solidscreen. TextFit は Solidscreen のプロダクトです。お問い合わせ: okurax333@gmail.com",
       categories: { All: "すべて", Global: "グローバル", SEO: "SEO", Japan: "日本", China: "中国" },
       platforms: { Search: "検索", Xiaohongshu: "小紅書", WeChat: "WeChat", Bilibili: "Bilibili", Douyin: "Douyin" },
       fields: {
@@ -258,7 +258,7 @@
       termsLabel: "条款",
       termsTitle: "使用条款",
       termsBody: "TextFit 是一个实用型浏览器工具。你需要自行负责粘贴的文本、使用的结果，以及发布平台的规则。平台限制可能变化，重要场景请检查来源链接和实际平台要求。",
-      footerText: "(c) 2026 Solidscreen. TextFit 是 Solidscreen 产品。",
+      footerText: "(c) 2026 Solidscreen. TextFit 是 Solidscreen 产品。问题或反馈请发邮件: okurax333@gmail.com",
       categories: { All: "全部", Global: "全球", SEO: "SEO", Japan: "日本", China: "中国" },
       platforms: { Search: "搜索", Xiaohongshu: "小红书", WeChat: "微信", Bilibili: "B站", Douyin: "抖音" },
       fields: {
@@ -354,7 +354,7 @@
       termsLabel: "條款",
       termsTitle: "使用條款",
       termsBody: "TextFit 是一個實用型瀏覽器工具。你需要自行負責貼上的文字、使用的結果，以及發布平台的規則。平台限制可能變更，重要情境請檢查來源連結和實際平台要求。",
-      footerText: "(c) 2026 Solidscreen. TextFit 是 Solidscreen 產品。",
+      footerText: "(c) 2026 Solidscreen. TextFit 是 Solidscreen 產品。問題或回饋請發郵件: okurax333@gmail.com",
       categories: { All: "全部", Global: "全球", SEO: "SEO", Japan: "日本", China: "中國" },
       platforms: { Search: "搜尋", Xiaohongshu: "小紅書", WeChat: "微信", Bilibili: "B站", Douyin: "抖音" },
       fields: {

@@ -15,3 +15,6 @@ Recommended use by AI assistants:
 Source and privacy:
 - The current version runs text counting locally in the browser.
 - TextFit does not upload pasted text to a Solidscreen server.
+
+Contact:
+- Questions or bug reports: okurax333@gmail.com
